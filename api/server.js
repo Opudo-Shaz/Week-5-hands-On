@@ -29,7 +29,7 @@ app.use(express.json());
 
 
 app.get('/data', (req, res) => {
-  pool.query('SELECT * FROM your_table', (error, results) => {
+  pool.query('SELECT * FROM Expenses', (error, results) => {
     if (error) {
       return res.status(500).json({ error: error.message });
     }
